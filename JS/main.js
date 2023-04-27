@@ -38,22 +38,22 @@ prezzoConLoSconto = prezzoSenzaSconto - ((20 * prezzoSenzaSconto) / 100 )
 
 // Se età utente è > 65 anni, allora il prezzo va diminuito del 40%
 
-else if (etaUtente > 65) {
+if (etaUtente > 65) {
     prezzoConLoSconto = prezzoSenzaSconto - ((40 * prezzoSenzaSconto) / 100 )
 };
 
 
 // Altrimenti età utente è > 18 anni e < 65 anni, il prezzo rimane quello che è (prezzo con lo sconto = prezzo senza sconto)
 
-
-
-
+if (etaUtente > 65 & etaUtente < 18) {
+    prezzoConLoSconto = parseInt (kmUtente * prezzoKm);
+};
 
 
 
 
 // Scriviamo messaggio per utente
-messaggio = `Il prezzo del biglietto è ${prezzoSenzaSconto} euro`;
+messaggio = `Il prezzo del biglietto è ${prezzoConLoSconto} euro`;
 console.log(messaggio);
 
 // Scrivi sulla pagina il prezzo del biglietto
