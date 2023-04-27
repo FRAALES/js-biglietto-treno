@@ -1,36 +1,9 @@
-// Il programma dovrà chiedere all’utente il numero di chilometri che vuole percorrere e l’età del passeggero. Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
-
-
-
-
-// il prezzo del biglietto è definito in base ai km (0.21 € al km) 
-
-
-
-
-// va applicato uno sconto del 20% per i minorenni
-
-
-
-
-
-
-// va applicato uno sconto del 40% per gli over 65.
-
-
-
-
-
-
-// L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo).
-
-
-
-
 // Dichiaro le mie variabili
 let kmUtente;
 let etaUtente;
 const prezzoKm = 0.21;
+let prezzoSenzaSconto;
+let prezzoConLoSconto;
 
 
 
@@ -48,17 +21,26 @@ console.log(etaUtente);
 
 // Moltiplica kmUtente per 0,21
 
-prezzoSenzaSconto = parseInt (kmUtente * 0,21);
+prezzoSenzaSconto = parseInt (kmUtente * prezzoKm);
 console.log(prezzoSenzaSconto);
+
+
 
 // Definisci prezzo:
 
 // Se età utente è < 18 anni, allora il prezzo va diminuito del 20%
 
+if (etaUtente < 18) {
+prezzoConLoSconto = prezzoSenzaSconto - ((20 * prezzoSenzaSconto) / 100 )
+};
 
 
 
 // Se età utente è > 65 anni, allora il prezzo va diminuito del 40%
+
+else if (etaUtente > 65) {
+    prezzoConLoSconto = prezzoSenzaSconto - ((40 * prezzoSenzaSconto) / 100 )
+};
 
 
 // Altrimenti età utente è > 18 anni e < 65 anni, il prezzo rimane quello che è (prezzo con lo sconto = prezzo senza sconto)
