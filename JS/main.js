@@ -45,7 +45,7 @@ else if (etaUtente > 65) {
 
 // Altrimenti età utente è > 18 anni e < 65 anni, il prezzo rimane quello che è (prezzo con lo sconto = prezzo senza sconto)
 
-else (etaUtente > 65 & etaUtente < 18); {
+else (etaUtente < 65 && etaUtente > 18); {
     prezzoConLoSconto = prezzoSenzaSconto;
 };
 
