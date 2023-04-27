@@ -31,22 +31,22 @@ console.log(prezzoSenzaSconto);
 // Se età utente è < 18 anni, allora il prezzo va diminuito del 20%
 
 if (etaUtente < 18) {
-prezzoConLoSconto = prezzoSenzaSconto - ((20 * prezzoSenzaSconto) / 100 )
-};
+prezzoConLoSconto = prezzoSenzaSconto - ((20 * prezzoSenzaSconto) / 100 );
+}
 
 
 
 // Se età utente è > 65 anni, allora il prezzo va diminuito del 40%
 
-if (etaUtente > 65) {
-    prezzoConLoSconto = prezzoSenzaSconto - ((40 * prezzoSenzaSconto) / 100 )
-};
+else if (etaUtente > 65) {
+    prezzoConLoSconto = prezzoSenzaSconto - ((40 * prezzoSenzaSconto) / 100 );
+}
 
 
 // Altrimenti età utente è > 18 anni e < 65 anni, il prezzo rimane quello che è (prezzo con lo sconto = prezzo senza sconto)
 
-if (etaUtente > 65 & etaUtente < 18) {
-    prezzoConLoSconto = parseInt (kmUtente * prezzoKm);
+else (etaUtente > 65 & etaUtente < 18); {
+    prezzoConLoSconto = prezzoSenzaSconto;
 };
 
 
